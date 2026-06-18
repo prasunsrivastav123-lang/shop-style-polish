@@ -1090,11 +1090,12 @@ h2 {
 
   .category-name {
     display: block;
-    margin-top: 8px;
+    margin-top: 10px;
     text-align: center;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.02em;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    color: #111;
   }
 
   .product-grid {
@@ -1118,6 +1119,11 @@ h2 {
   .category-card {
     min-height: 0;
     aspect-ratio: 1 / 1;
+    border-radius: 14px;
+  }
+
+  .category-card img {
+    border-radius: 14px;
   }
 
   .wide-feature img,
