@@ -1207,3 +1207,59 @@ h2 {
     grid-template-columns: 1fr;
   }
 }
+
+.ador-reveal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(28px, 6vw, 80px);
+  padding: 72px 32px;
+  background: var(--white);
+  overflow: hidden;
+}
+
+.ador-reveal-logo {
+  width: clamp(160px, 22vw, 280px);
+  height: auto;
+  filter: brightness(0);
+  opacity: 0;
+  transform: translateY(8px);
+  animation: adorLogoIn 1.1s ease 0.35s forwards;
+}
+
+.ador-flower {
+  width: clamp(64px, 9vw, 110px);
+  height: auto;
+  opacity: 0;
+}
+
+.ador-flower-left {
+  transform: translateX(-40px) rotate(-12deg);
+  animation: adorFlowerLeft 1.1s ease forwards, adorFlowerFloat 5s ease-in-out 1.4s infinite;
+}
+
+.ador-flower-right {
+  transform: translateX(40px) rotate(12deg);
+  animation: adorFlowerRight 1.1s ease forwards, adorFlowerFloat 5s ease-in-out 1.4s infinite reverse;
+}
+
+@keyframes adorLogoIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes adorFlowerLeft {
+  to { opacity: 1; transform: translateX(0) rotate(0deg); }
+}
+
+@keyframes adorFlowerRight {
+  to { opacity: 1; transform: translateX(0) rotate(0deg); }
+}
+
+@keyframes adorFlowerFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(6deg); }
+}
+
+@media (max-width: 560px) {
+  .ador-reveal { padding: 48px 20px; gap: 18px; }
+}
