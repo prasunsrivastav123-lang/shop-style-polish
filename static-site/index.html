@@ -15,6 +15,9 @@
     </div>
 
     <header class="site-header">
+      <button class="nav-toggle" type="button" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
       <a class="brand" href="index.html" aria-label="Ador home"><img src="assets/ador-logo-cropped.png?v=3" alt="Ador" /></a>
       <nav class="primary-nav" aria-label="Primary navigation">
         <a href="index.html">Home</a>
@@ -22,12 +25,17 @@
         <a href="about.html">The Ador Edit</a>
         <a href="contact.html">Contact</a>
       </nav>
-      <a class="cart-link" href="cart.html" aria-label="Cart">
-        <span class="cart-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" role="img"><path d="M7 8h10l-.8 10.2A2 2 0 0 1 14.2 20H9.8a2 2 0 0 1-2-1.8L7 8Zm2-3a3 3 0 0 1 6 0v3H9V5Zm2 3h2V5a1 1 0 0 0-2 0v3Z"/></svg>
-        </span>
-        <span class="cart-count" data-cart-count>0</span>
-      </a>
+      <div class="header-actions">
+        <button class="header-search" type="button" aria-label="Search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+        <a class="cart-link" href="cart.html" aria-label="Cart">
+          <span class="cart-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="img"><path d="M7 8h10l-.8 10.2A2 2 0 0 1 14.2 20H9.8a2 2 0 0 1-2-1.8L7 8Zm2-3a3 3 0 0 1 6 0v3H9V5Zm2 3h2V5a1 1 0 0 0-2 0v3Z"/></svg>
+          </span>
+          <span class="cart-count" data-cart-count>0</span>
+        </a>
+      </div>
     </header>
 
     <main>
