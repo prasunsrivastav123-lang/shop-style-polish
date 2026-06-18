@@ -1,0 +1,355 @@
+const products = [
+  {
+    id: "denim-long-dress",
+    name: "Flora Muse Blazer Dress",
+    category: "Dresses",
+    price: 2399,
+    compare: 2999,
+    rating: "5.0",
+    reviews: 4,
+    tag: "Offer",
+    image: "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=900&q=85",
+    description: "Introducing the Flora Muse Blazer Dress, a playful blend of tailored elegance and feminine charm. Designed in a flattering blazer-style silhouette with delicate floral detailing, statement sleeves, functional pockets, soft lining, and refined finishing for an elevated look. Perfect for brunch dates, intimate celebrations, vacations, daytime events, cafe outings, and elegant gatherings. A timeless statement piece created to make everyday dressing feel effortlessly graceful and beautifully unique."
+  },
+  {
+    id: "pink-checks-coord",
+    name: "Emily Pink Checks Coord",
+    category: "Co-Ords",
+    price: 2799,
+    compare: 3499,
+    rating: "4.43",
+    reviews: 21,
+    tag: "Offer",
+    image: "https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=900&q=85",
+    description: "Introducing the Emily Pink Checks Coord, a sweet polished two-piece set designed for comfort, charm, and easy styling. Crafted with a soft check pattern, flattering tailoring, functional finishing, and a boutique-inspired fit, this coord is perfect for day parties, coffee plans, holidays, college events, and casual celebrations. A fresh everyday statement made to feel cute, refined, and effortless."
+  },
+  {
+    id: "black-frock-dress",
+    name: "Black Frock Dress",
+    category: "Dresses",
+    price: 1999,
+    compare: 2499,
+    rating: "4.78",
+    reviews: 12,
+    tag: "Hot Deal",
+    image: "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=85",
+    description: "Introducing the Black Frock Dress, a graceful mini silhouette with soft volume, a flattering waist, and clean premium finishing. Designed for dinner plans, birthday outings, evening dates, festive gatherings, and party-ready moments, it brings together comfort, movement, and polished feminine charm. A classic black piece made to feel easy, elegant, and unforgettable."
+  },
+  {
+    id: "sunbeam-cotton-coord",
+    name: "Sunbeam Semi Formal Cotton Coord Set",
+    category: "Co-Ords",
+    price: 2199,
+    compare: 2749,
+    rating: "4.62",
+    reviews: 18,
+    tag: "New",
+    image: "https://images.unsplash.com/photo-1543087903-1ac2ec7aa8c5?auto=format&fit=crop&w=900&q=85",
+    description: "Introducing the Sunbeam Semi Formal Cotton Coord Set, a bright and breezy outfit created for soft structure and all-day ease. Made with relaxed tailoring, breathable comfort, refined seams, and a fresh semi-formal finish, it is perfect for work lunches, vacations, brunches, daytime occasions, and casual celebrations. A smooth custom-fit set designed to look polished without feeling heavy."
+  },
+  {
+    id: "off-white-blazer",
+    name: "Off-White Blazer Jacket",
+    category: "Tops",
+    price: 3199,
+    compare: 3999,
+    rating: "4.71",
+    reviews: 9,
+    tag: "Limited",
+    image: "https://images.unsplash.com/photo-1534126511673-b6899657816a?auto=format&fit=crop&w=900&q=85",
+    description: "Introducing the Off-White Blazer Jacket, a refined layering piece made for elegant dressing with a modern edge. Designed with a clean structured fit, premium zipper and hook support, smooth inner finishing, and versatile styling potential, it pairs beautifully with corsets, dresses, tailored bottoms, and coord sets. Perfect for meetings, dinners, events, and elevated everyday looks."
+  },
+  {
+    id: "loose-fit-denim-pants",
+    name: "Loose Fit Denim Pants",
+    category: "Bottoms",
+    price: 1999,
+    compare: 2499,
+    rating: "4.55",
+    reviews: 15,
+    tag: "Ready",
+    image: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=900&q=85",
+    description: "Introducing the Loose Fit Denim Pants, a soft wide-leg essential made for easy movement and polished styling. Designed with a clean high-rise waist, comfortable drape, functional pockets, durable finishing, and a relaxed made-to-fit feel, these pants are perfect for everyday plans, travel days, cafe outings, shopping looks, and casual styling with an elevated touch."
+  },
+  {
+    id: "ruby-party-gown",
+    name: "Ruby Party Gown",
+    category: "Gowns",
+    price: 5999,
+    compare: 7499,
+    rating: "4.88",
+    reviews: 11,
+    tag: "Bestseller",
+    image: "https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=900&q=85",
+    description: "Introducing the Ruby Party Gown, a dramatic occasion piece designed for graceful movement and a confident evening profile. Crafted with soft inner lining, refined finishing, elegant fall, and a custom-fit approach, it is perfect for receptions, parties, anniversary dinners, festive nights, and special celebrations. A statement gown made to feel luxurious, flattering, and personal."
+  },
+  {
+    id: "classic-denim-fits",
+    name: "Couple Classic Denim Fits",
+    category: "Men",
+    price: 4799,
+    compare: 5999,
+    rating: "4.56",
+    reviews: 18,
+    tag: "Offer",
+    image: "https://images.unsplash.com/photo-1506629905607-d9c297d9c31b?auto=format&fit=crop&w=900&q=85",
+    description: "Introducing the Couple Classic Denim Fits, a coordinated denim styling set made for matching moments with a relaxed premium finish. Designed with comfortable tailoring, durable stitching, functional details, and easy styling, it is perfect for couple shoots, vacations, casual celebrations, cafe plans, and everyday statement dressing. A modern matching look created to feel personal and effortlessly cool."
+  }
+];
+
+const categories = [
+  { name: "Co-Ords", image: "https://images.unsplash.com/photo-1516762689617-e1cffcef479d?auto=format&fit=crop&w=700&q=85" },
+  { name: "Dresses", image: "https://images.unsplash.com/photo-1550639525-c97d455acf70?auto=format&fit=crop&w=700&q=85" },
+  { name: "Gowns", image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=700&q=85" },
+  { name: "Bottoms", image: "https://images.unsplash.com/photo-1475180098004-ca77a66827be?auto=format&fit=crop&w=700&q=85" },
+  { name: "Tops", image: "https://images.unsplash.com/photo-1554412933-514a83d2f3c8?auto=format&fit=crop&w=700&q=85" }
+];
+
+const sizes = ["XS", "S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL"];
+const exactMeasurements = ["Standard size", "Bust", "Waist", "Hip", "Shoulder", "Sleeve length", "Dress length", "Full body measurements"];
+const currency = new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR", maximumFractionDigits: 0 });
+
+function getCart() {
+  return JSON.parse(localStorage.getItem("adorCart") || "[]");
+}
+
+function saveCart(cart) {
+  localStorage.setItem("adorCart", JSON.stringify(cart));
+  updateCartCount();
+}
+
+function updateCartCount() {
+  const count = getCart().reduce((total, item) => total + item.quantity, 0);
+  document.querySelectorAll("[data-cart-count]").forEach((el) => {
+    el.textContent = count;
+  });
+}
+
+function productUrl(product) {
+  return `product.html?id=${product.id}`;
+}
+
+function discount(product) {
+  return Math.round(((product.compare - product.price) / product.compare) * 100);
+}
+
+function renderProductCard(product) {
+  return `
+    <article class="product-card">
+      <a href="${productUrl(product)}">
+        <div class="image-wrap">
+          <img src="${product.image}" alt="${product.name}" />
+          <span class="badge">${product.tag}</span>
+        </div>
+        <div class="product-info">
+          <h3>${product.name}</h3>
+          <div class="rating">${product.rating} / 5.0 (${product.reviews})</div>
+          <div class="price">
+            <span class="sale">${currency.format(product.price)}</span>
+            <span class="compare">${currency.format(product.compare)}</span>
+            <span class="discount">(${discount(product)}% OFF)</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  `;
+}
+
+function renderProductGrids() {
+  document.querySelectorAll("[data-product-grid]").forEach((grid) => {
+    const type = grid.dataset.productGrid;
+    const urlCategory = new URLSearchParams(location.search).get("category");
+    let list = products;
+    if (type === "bestsellers") list = products.slice(0, 4);
+    if (type === "deals") list = products.slice(2, 6);
+    if (urlCategory) list = products.filter((product) => product.category === urlCategory);
+    grid.innerHTML = list.map(renderProductCard).join("");
+  });
+}
+
+function renderCategories() {
+  const strip = document.querySelector("[data-category-strip]");
+  if (!strip) return;
+  strip.innerHTML = categories
+    .map((category) => `<div class="category-item"><a class="category-card" href="categories.html?category=${encodeURIComponent(category.name)}"><img src="${category.image}" alt="${category.name}" /><span>${category.name}</span></a><p class="category-name">${category.name}</p></div>`)
+    .join("");
+}
+
+function renderFilters() {
+  const bar = document.querySelector("[data-filter-bar]");
+  if (!bar) return;
+  const selected = new URLSearchParams(location.search).get("category") || "All";
+  const options = ["All", ...new Set(products.map((product) => product.category))];
+  bar.innerHTML = options
+    .map((option) => `<button class="${selected === option ? "active" : ""}" data-category="${option}">${option}</button>`)
+    .join("");
+  bar.addEventListener("click", (event) => {
+    const button = event.target.closest("button");
+    if (!button) return;
+    const category = button.dataset.category;
+    location.href = category === "All" ? "categories.html" : `categories.html?category=${encodeURIComponent(category)}`;
+  });
+}
+
+function renderProductDetail() {
+  const mount = document.querySelector("[data-product-detail]");
+  if (!mount) return;
+  const id = new URLSearchParams(location.search).get("id") || products[0].id;
+  const product = products.find((item) => item.id === id) || products[0];
+  document.title = `${product.name} | Ador`;
+  mount.innerHTML = `
+    <section class="product-detail">
+      <div class="product-gallery">
+        <img src="${product.image}" alt="${product.name}" />
+      </div>
+      <div class="product-summary">
+        <p class="rating">${product.rating} / 5.0 (${product.reviews} reviews)</p>
+        <div class="product-facts">
+          <p class="option-title">Name</p>
+          <h1>${product.name}</h1>
+          <p class="option-title">Price</p>
+          <div class="price">
+            <span class="compare">${currency.format(product.compare)}</span>
+            <span class="sale">${currency.format(product.price)}</span>
+            <span class="discount">${discount(product)}% off</span>
+          </div>
+          <p class="option-title">Description</p>
+          <p>${product.description}</p>
+        </div>
+        <form data-add-form>
+          <p class="option-title">Size</p>
+          <div class="size-options">
+            ${sizes.map((size, index) => `<label><input type="radio" name="size" value="${size}" ${index === 1 ? "checked" : ""} />${size}</label>`).join("")}
+          </div>
+          <label class="measurement-select">
+            <p class="option-title">Exact measurements selection</p>
+            <select name="measurementType">
+              ${exactMeasurements.map((measurement) => `<option value="${measurement}">${measurement}</option>`).join("")}
+            </select>
+          </label>
+          <label class="custom-size">
+            <p class="option-title">Custom size notes</p>
+            <textarea name="customSize" placeholder="Example: Bust 36, waist 30, hip 40, height 5'5. Leave blank for standard size."></textarea>
+          </label>
+          <div class="quantity">
+            <label>
+              <p class="option-title">Qty</p>
+              <input name="quantity" type="number" min="1" value="1" />
+            </label>
+            <button class="button primary full" type="submit">Add to cart</button>
+          </div>
+        </form>
+        <div class="product-meta">
+          <p>Free delivery above Rs. 1499. Easy exchange and return.</p>
+          <p>Need a special fit? Add custom size notes before adding to cart.</p>
+        </div>
+      </div>
+    </section>
+  `;
+
+  mount.querySelector("[data-add-form]").addEventListener("submit", (event) => {
+    event.preventDefault();
+    const form = new FormData(event.currentTarget);
+    addToCart({
+      id: product.id,
+      size: form.get("size"),
+      measurementType: form.get("measurementType"),
+      customSize: String(form.get("customSize") || "").trim(),
+      quantity: Math.max(1, Number(form.get("quantity") || 1))
+    });
+    location.href = "cart.html";
+  });
+}
+
+function addToCart(item) {
+  const cart = getCart();
+  const key = `${item.id}-${item.size}-${item.measurementType}-${item.customSize}`;
+  const existing = cart.find((entry) => `${entry.id}-${entry.size}-${entry.measurementType}-${entry.customSize}` === key);
+  if (existing) {
+    existing.quantity += item.quantity;
+  } else {
+    cart.push(item);
+  }
+  saveCart(cart);
+}
+
+function renderCart() {
+  const mount = document.querySelector("[data-cart-page]");
+  if (!mount) return;
+  const cart = getCart();
+  if (!cart.length) {
+    mount.innerHTML = `<div class="empty-state"><h2>Your cart is empty</h2><p>Find your next party-ready piece.</p><a class="button primary" href="categories.html">Continue shopping</a></div>`;
+    return;
+  }
+  const detailed = cart.map((item) => ({ ...item, product: products.find((product) => product.id === item.id) })).filter((item) => item.product);
+  const subtotal = detailed.reduce((sum, item) => sum + item.product.price * item.quantity, 0);
+  mount.innerHTML = `
+    <div class="cart-items">
+      ${detailed
+        .map(
+          (item, index) => `
+          <article class="cart-item">
+            <img src="${item.product.image}" alt="${item.product.name}" />
+            <div>
+              <h3>${item.product.name}</h3>
+              <p>Size: ${item.size}</p>
+              ${item.measurementType ? `<p>Measurement: ${item.measurementType}</p>` : ""}
+              ${item.customSize ? `<p>Custom: ${item.customSize}</p>` : ""}
+              <p>Qty: ${item.quantity}</p>
+              <button data-remove="${index}" type="button">Remove</button>
+            </div>
+            <strong class="sale">${currency.format(item.product.price * item.quantity)}</strong>
+          </article>
+        `
+        )
+        .join("")}
+    </div>
+    <aside class="cart-summary">
+      <h2>Order Summary</h2>
+      <div><span>Subtotal</span><strong>${currency.format(subtotal)}</strong></div>
+      <div><span>Shipping</span><strong>${subtotal >= 1499 ? "Free" : currency.format(99)}</strong></div>
+      <div><span>Total</span><strong>${currency.format(subtotal + (subtotal >= 1499 ? 0 : 99))}</strong></div>
+      <button class="button primary full" type="button">Checkout</button>
+    </aside>
+  `;
+  mount.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-remove]");
+    if (!button) return;
+    const nextCart = getCart();
+    nextCart.splice(Number(button.dataset.remove), 1);
+    saveCart(nextCart);
+    renderCart();
+  });
+}
+
+function renderRefundPolicy() {
+  document.querySelectorAll(".site-footer").forEach((footer) => {
+    if (footer.querySelector(".refund-policy")) return;
+    const policy = document.createElement("details");
+    policy.className = "refund-policy";
+    policy.innerHTML = `
+      <summary>Return & Exchange Policy</summary>
+      <div>
+        <p>At Ador, every piece is thoughtfully made according to your selected measurements and customization details. Because of this personalised process, each outfit is crafted specifically for you.</p>
+        <p>Since we take time to confirm your exact sizing and preferences before production, we ensure that your outfit is made with the right fit in mind from the very beginning.</p>
+        <h3>Careful Size Confirmation</h3>
+        <p>Every order is personally checked and confirmed so that your measurements and customization details are accurately understood before we begin making your outfit.</p>
+        <h3>Made-to-Fit Approach</h3>
+        <p>As each piece is created based on your provided measurements, we aim to deliver a fit that aligns closely with your body shape and preferences.</p>
+        <h3>Alteration Support</h3>
+        <p>In case any minor adjustment is needed, alteration assistance is available so your outfit fits you perfectly and feels just right.</p>
+        <p>At Ador, our focus is always on getting the fit right from the start, so you receive a piece that feels truly made for you.</p>
+      </div>
+    `;
+    const copyright = footer.querySelector(".copyright, .site-footer > p:last-child");
+    footer.insertBefore(policy, copyright || null);
+  });
+}
+
+renderCategories();
+renderFilters();
+renderProductGrids();
+renderProductDetail();
+renderCart();
+renderRefundPolicy();
+updateCartCount();
