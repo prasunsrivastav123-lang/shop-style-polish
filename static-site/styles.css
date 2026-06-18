@@ -104,8 +104,24 @@ textarea {
   color: var(--ink);
 }
 
-.cart-link {
+.nav-toggle,
+.header-search {
+  display: none;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.header-actions {
   justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.cart-link {
   position: relative;
   display: inline-grid;
   place-items: center;
