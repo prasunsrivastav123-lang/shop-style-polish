@@ -346,10 +346,71 @@ function renderRefundPolicy() {
   });
 }
 
+function renderSearch() {
+  const triggers = document.querySelectorAll(".header-search");
+  if (!triggers.length) return;
+  const overlay = document.createElement("div");
+  overlay.className = "search-overlay";
+  overlay.innerHTML = `
+    <div class="search-panel" role="dialog" aria-label="Search">
+      <div class="search-bar">
+        <svg class="search-bar-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <input type="search" placeholder="Search products or categories" aria-label="Search" data-search-input />
+        <button type="button" class="search-close" aria-label="Close search">&times;</button>
+      </div>
+      <div class="search-results" data-search-results>
+        <p class="search-hint">Try "saree", "lehenga", or a category name.</p>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+  const input = overlay.querySelector("[data-search-input]");
+  const results = overlay.querySelector("[data-search-results]");
+  const open = () => {
+    overlay.classList.add("open");
+    document.body.style.overflow = "hidden";
+    setTimeout(() => input.focus(), 30);
+  };
+  const close = () => {
+    overlay.classList.remove("open");
+    document.body.style.overflow = "";
+  };
+  triggers.forEach((t) => t.addEventListener("click", open));
+  overlay.querySelector(".search-close").addEventListener("click", close);
+  overlay.addEventListener("click", (e) => { if (e.target === overlay) close(); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
+  input.addEventListener("input", () => {
+    const q = input.value.trim().toLowerCase();
+    if (!q) {
+      results.innerHTML = `<p class="search-hint">Try "saree", "lehenga", or a category name.</p>`;
+      return;
+    }
+    const cats = categories.filter((c) => c.name.toLowerCase().includes(q));
+    const prods = products.filter((p) => p.name.toLowerCase().includes(q) || p.category.toLowerCase().includes(q)).slice(0, 8);
+    if (!cats.length && !prods.length) {
+      results.innerHTML = `<p class="search-hint">No matches for "${q}".</p>`;
+      return;
+    }
+    let html = "";
+    if (cats.length) {
+      html += `<div class="search-group"><h4>Categories</h4><div class="search-cats">` +
+        cats.map((c) => `<a href="categories.html?category=${encodeURIComponent(c.name)}" class="search-cat"><img src="${c.image}" alt=""><span>${c.name}</span></a>`).join("") +
+        `</div></div>`;
+    }
+    if (prods.length) {
+      html += `<div class="search-group"><h4>Products</h4><div class="search-prods">` +
+        prods.map((p) => `<a href="product.html?id=${p.id}" class="search-prod"><img src="${p.image}" alt=""><div><span class="search-prod-name">${p.name}</span><span class="search-prod-price">${currency.format(p.price)}</span></div></a>`).join("") +
+        `</div></div>`;
+    }
+    results.innerHTML = html;
+  });
+}
+
 renderCategories();
 renderFilters();
 renderProductGrids();
 renderProductDetail();
 renderCart();
 renderRefundPolicy();
+renderSearch();
 updateCartCount();
