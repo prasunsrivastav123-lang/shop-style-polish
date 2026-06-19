@@ -249,6 +249,16 @@ function renderProductDetail() {
     </section>
   `;
 
+  mount.querySelectorAll("[data-thumb]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const src = btn.getAttribute("data-thumb");
+      const main = mount.querySelector("[data-main-image]");
+      if (main) main.src = src;
+      mount.querySelectorAll(".thumb").forEach((t) => t.classList.remove("active"));
+      btn.classList.add("active");
+    });
+  });
+
   mount.querySelector("[data-add-form]").addEventListener("submit", (event) => {
     event.preventDefault();
     const form = new FormData(event.currentTarget);
