@@ -885,6 +885,36 @@ h2 {
 .product-gallery img {
   width: 100%;
   aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+.product-gallery .thumb-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.product-gallery .thumb {
+  width: 72px;
+  height: 96px;
+  padding: 0;
+  border: 1px solid #e5e5e5;
+  background: #fff;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.product-gallery .thumb.active {
+  border-color: #111;
+}
+
+.product-gallery .thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: auto;
 }
 
 .product-summary {
