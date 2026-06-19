@@ -8,7 +8,8 @@ const products = [
     rating: "5.0",
     reviews: 4,
     tag: "Offer",
-    image: "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=900&q=85",
+    image: "assets/flora-muse-1.png",
+    images: ["assets/flora-muse-1.png", "assets/flora-muse-2.png", "assets/flora-muse-3.jpg"],
     description: "Introducing the Flora Muse Blazer Dress, a playful blend of tailored elegance and feminine charm. Designed in a flattering blazer-style silhouette with delicate floral detailing, statement sleeves, functional pockets, soft lining, and refined finishing for an elevated look. Perfect for brunch dates, intimate celebrations, vacations, daytime events, cafe outings, and elegant gatherings. A timeless statement piece created to make everyday dressing feel effortlessly graceful and beautifully unique."
   },
   {
@@ -200,7 +201,8 @@ function renderProductDetail() {
   mount.innerHTML = `
     <section class="product-detail">
       <div class="product-gallery">
-        <img src="${product.image}" alt="${product.name}" />
+        <img src="${(product.images && product.images[0]) || product.image}" alt="${product.name}" data-main-image />
+        ${product.images && product.images.length > 1 ? `<div class="thumb-row">${product.images.map((src, i) => `<button type="button" class="thumb${i === 0 ? " active" : ""}" data-thumb="${src}"><img src="${src}" alt="${product.name} ${i + 1}"/></button>`).join("")}</div>` : ""}
       </div>
       <div class="product-summary">
         <p class="rating">${product.rating} / 5.0 (${product.reviews} reviews)</p>
@@ -246,6 +248,16 @@ function renderProductDetail() {
       </div>
     </section>
   `;
+
+  mount.querySelectorAll("[data-thumb]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const src = btn.getAttribute("data-thumb");
+      const main = mount.querySelector("[data-main-image]");
+      if (main) main.src = src;
+      mount.querySelectorAll(".thumb").forEach((t) => t.classList.remove("active"));
+      btn.classList.add("active");
+    });
+  });
 
   mount.querySelector("[data-add-form]").addEventListener("submit", (event) => {
     event.preventDefault();
