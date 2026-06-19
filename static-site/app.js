@@ -406,6 +406,38 @@ function renderSearch() {
   });
 }
 
+function renderMobileMenu() {
+  const triggers = document.querySelectorAll(".nav-toggle");
+  if (!triggers.length) return;
+  const links = [
+    { href: "index.html", label: "Home" },
+    { href: "categories.html", label: "Categories" },
+    { href: "about.html", label: "The Ador Edit" },
+    { href: "contact.html", label: "Contact" },
+    { href: "cart.html", label: "Cart" },
+  ];
+  const drawer = document.createElement("div");
+  drawer.className = "mobile-drawer";
+  drawer.innerHTML = `
+    <div class="mobile-drawer-panel" role="dialog" aria-label="Menu">
+      <div class="mobile-drawer-head">
+        <strong>Ador</strong>
+        <button type="button" class="mobile-drawer-close" aria-label="Close menu">&times;</button>
+      </div>
+      <nav class="mobile-drawer-nav">
+        ${links.map((l) => `<a href="${l.href}">${l.label}</a>`).join("")}
+      </nav>
+    </div>
+  `;
+  document.body.appendChild(drawer);
+  const open = () => { drawer.classList.add("open"); document.body.style.overflow = "hidden"; };
+  const close = () => { drawer.classList.remove("open"); document.body.style.overflow = ""; };
+  triggers.forEach((t) => t.addEventListener("click", open));
+  drawer.querySelector(".mobile-drawer-close").addEventListener("click", close);
+  drawer.addEventListener("click", (e) => { if (e.target === drawer) close(); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
+}
+
 renderCategories();
 renderFilters();
 renderProductGrids();
@@ -413,4 +445,6 @@ renderProductDetail();
 renderCart();
 renderRefundPolicy();
 renderSearch();
+renderMobileMenu();
 updateCartCount();
+
