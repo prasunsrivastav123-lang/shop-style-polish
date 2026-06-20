@@ -1206,24 +1206,26 @@ h2 {
     padding: 0 20px 28px;
   }
 
-  .category-strip {
-    display: flex;
-    gap: 12px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    padding: 0 16px 6px;
-    margin: 0 -16px;
-    scrollbar-width: none;
+  .section {
+    padding: 20px 16px;
   }
 
-  .category-strip::-webkit-scrollbar {
-    display: none;
+  .section-heading {
+    margin-bottom: 14px;
+  }
+
+  .category-strip {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+    overflow: visible;
+    padding: 0;
+    margin: 0;
   }
 
   .category-strip > * {
-    flex: 0 0 22%;
-    scroll-snap-align: start;
+    flex: initial;
+    width: auto;
   }
 
   .category-card span {
@@ -1232,13 +1234,13 @@ h2 {
 
   .category-name {
     display: block;
-    margin-top: 8px;
+    margin-top: 6px;
     text-align: center;
-    font-size: 12.5px;
+    font-size: 11px;
     font-weight: 700;
     letter-spacing: 0.01em;
     color: #111;
-    line-height: 1.2;
+    line-height: 1.15;
   }
 
 
