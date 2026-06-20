@@ -13,6 +13,19 @@ const products = [
     description: "Introducing the Flora Muse Blazer Dress \u2014 a playful blend of tailored elegance and feminine charm. Designed in a flattering blazer-style silhouette with delicate floral detailing, statement sleeves, functional pockets, soft lining, and refined finishing for an elevated look. Perfect for brunch dates, intimate celebrations, vacations, daytime events, caf\u00e9 outings, and elegant gatherings. A timeless statement piece created to make everyday dressing feel effortlessly graceful and beautifully unique."
   },
   {
+    id: "celeste-ruched-sleeve-dress",
+    name: "Celeste Ruched Sleeve Dress",
+    category: "Dresses",
+    price: 2899,
+    compare: 3625,
+    rating: "5.0",
+    reviews: 3,
+    tag: "New",
+    image: "assets/celeste-1.png",
+    images: ["assets/celeste-1.png", "assets/celeste-2.png", "assets/celeste-3.png", "assets/celeste-4.png"],
+    description: "Introducing the Celeste Ruched Sleeve Dress \u2014 where tailored structure meets soft femininity. Designed in a chic blazer-style silhouette with statement ruched sleeves, smooth lining for comfort, functional pockets, and refined collar pasting for a polished finish. Perfect for brunch dates, birthday celebrations, intimate events, resort evenings, work lunches, and elegant day outings. A timeless piece made to feel effortless, elevated, and beautifully put together wherever you wear it."
+  },
+  {
     id: "pink-checks-coord",
     name: "Emily Pink Checks Coord",
     category: "Co-Ords",
