@@ -24,99 +24,13 @@ const products = [
     image: "assets/celeste-1.png",
     images: ["assets/celeste-1.png", "assets/celeste-2.png", "assets/celeste-3.png", "assets/celeste-4.png"],
     description: "Introducing the Celeste Ruched Sleeve Dress \u2014 where tailored structure meets soft femininity. Designed in a chic blazer-style silhouette with statement ruched sleeves, smooth lining for comfort, functional pockets, and refined collar pasting for a polished finish. Perfect for brunch dates, birthday celebrations, intimate events, resort evenings, work lunches, and elegant day outings. A timeless piece made to feel effortless, elevated, and beautifully put together wherever you wear it."
-  },
-  {
-    id: "pink-checks-coord",
-    name: "Emily Pink Checks Coord",
-    category: "Co-Ords",
-    price: 2799,
-    compare: 3499,
-    rating: "4.43",
-    reviews: 21,
-    tag: "Offer",
-    image: "https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=900&q=85",
-    description: "Introducing the Emily Pink Checks Coord, a sweet polished two-piece set designed for comfort, charm, and easy styling. Crafted with a soft check pattern, flattering tailoring, functional finishing, and a boutique-inspired fit, this coord is perfect for day parties, coffee plans, holidays, college events, and casual celebrations. A fresh everyday statement made to feel cute, refined, and effortless."
-  },
-  {
-    id: "black-frock-dress",
-    name: "Black Frock Dress",
-    category: "Dresses",
-    price: 1999,
-    compare: 2499,
-    rating: "4.78",
-    reviews: 12,
-    tag: "Hot Deal",
-    image: "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=85",
-    description: "Introducing the Black Frock Dress, a graceful mini silhouette with soft volume, a flattering waist, and clean premium finishing. Designed for dinner plans, birthday outings, evening dates, festive gatherings, and party-ready moments, it brings together comfort, movement, and polished feminine charm. A classic black piece made to feel easy, elegant, and unforgettable."
-  },
-  {
-    id: "sunbeam-cotton-coord",
-    name: "Sunbeam Semi Formal Cotton Coord Set",
-    category: "Co-Ords",
-    price: 2199,
-    compare: 2749,
-    rating: "4.62",
-    reviews: 18,
-    tag: "New",
-    image: "https://images.unsplash.com/photo-1543087903-1ac2ec7aa8c5?auto=format&fit=crop&w=900&q=85",
-    description: "Introducing the Sunbeam Semi Formal Cotton Coord Set, a bright and breezy outfit created for soft structure and all-day ease. Made with relaxed tailoring, breathable comfort, refined seams, and a fresh semi-formal finish, it is perfect for work lunches, vacations, brunches, daytime occasions, and casual celebrations. A smooth custom-fit set designed to look polished without feeling heavy."
-  },
-  {
-    id: "off-white-blazer",
-    name: "Off-White Blazer Jacket",
-    category: "Tops",
-    price: 3199,
-    compare: 3999,
-    rating: "4.71",
-    reviews: 9,
-    tag: "Limited",
-    image: "https://images.unsplash.com/photo-1534126511673-b6899657816a?auto=format&fit=crop&w=900&q=85",
-    description: "Introducing the Off-White Blazer Jacket, a refined layering piece made for elegant dressing with a modern edge. Designed with a clean structured fit, premium zipper and hook support, smooth inner finishing, and versatile styling potential, it pairs beautifully with corsets, dresses, tailored bottoms, and coord sets. Perfect for meetings, dinners, events, and elevated everyday looks."
-  },
-  {
-    id: "loose-fit-denim-pants",
-    name: "Loose Fit Denim Pants",
-    category: "Bottoms",
-    price: 1999,
-    compare: 2499,
-    rating: "4.55",
-    reviews: 15,
-    tag: "Ready",
-    image: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=900&q=85",
-    description: "Introducing the Loose Fit Denim Pants, a soft wide-leg essential made for easy movement and polished styling. Designed with a clean high-rise waist, comfortable drape, functional pockets, durable finishing, and a relaxed made-to-fit feel, these pants are perfect for everyday plans, travel days, cafe outings, shopping looks, and casual styling with an elevated touch."
-  },
-  {
-    id: "ruby-party-gown",
-    name: "Ruby Party Gown",
-    category: "Gowns",
-    price: 5999,
-    compare: 7499,
-    rating: "4.88",
-    reviews: 11,
-    tag: "Bestseller",
-    image: "https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=900&q=85",
-    description: "Introducing the Ruby Party Gown, a dramatic occasion piece designed for graceful movement and a confident evening profile. Crafted with soft inner lining, refined finishing, elegant fall, and a custom-fit approach, it is perfect for receptions, parties, anniversary dinners, festive nights, and special celebrations. A statement gown made to feel luxurious, flattering, and personal."
-  },
-  {
-    id: "classic-denim-fits",
-    name: "Couple Classic Denim Fits",
-    category: "Men",
-    price: 4799,
-    compare: 5999,
-    rating: "4.56",
-    reviews: 18,
-    tag: "Offer",
-    image: "https://images.unsplash.com/photo-1506629905607-d9c297d9c31b?auto=format&fit=crop&w=900&q=85",
-    description: "Introducing the Couple Classic Denim Fits, a coordinated denim styling set made for matching moments with a relaxed premium finish. Designed with comfortable tailoring, durable stitching, functional details, and easy styling, it is perfect for couple shoots, vacations, casual celebrations, cafe plans, and everyday statement dressing. A modern matching look created to feel personal and effortlessly cool."
   }
 ];
 
 const categories = [
   { name: "Co-Ords", image: "https://images.unsplash.com/photo-1516762689617-e1cffcef479d?auto=format&fit=crop&w=700&q=85" },
   { name: "Dresses", image: "https://images.unsplash.com/photo-1550639525-c97d455acf70?auto=format&fit=crop&w=700&q=85" },
-  { name: "Gowns", image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=700&q=85" },
-  { name: "Bottoms", image: "https://images.unsplash.com/photo-1475180098004-ca77a66827be?auto=format&fit=crop&w=700&q=85" },
-  { name: "Tops", image: "https://images.unsplash.com/photo-1554412933-514a83d2f3c8?auto=format&fit=crop&w=700&q=85" }
+  { name: "Men", image: "https://images.unsplash.com/photo-1506629905607-d9c297d9c31b?auto=format&fit=crop&w=700&q=85" }
 ];
 
 const sizes = ["XS", "S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL"];
