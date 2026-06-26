@@ -56,7 +56,7 @@ const products = [
 const categories = [
   { name: "Co-Ords", image: "https://images.unsplash.com/photo-1516762689617-e1cffcef479d?auto=format&fit=crop&w=700&q=85" },
   { name: "Dresses", image: "https://images.unsplash.com/photo-1550639525-c97d455acf70?auto=format&fit=crop&w=700&q=85" },
-  { name: "Men", image: "https://images.unsplash.com/photo-1506629905607-d9c297d9c31b?auto=format&fit=crop&w=700&q=85" }
+  { name: "Men", image: "https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=700&q=85" }
 ];
 
 const sizes = ["XS", "S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL"];
