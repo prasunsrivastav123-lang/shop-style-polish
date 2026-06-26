@@ -294,8 +294,39 @@ function renderRefundPolicy() {
         <p>At Ador, our focus is always on getting the fit right from the start, so you receive a piece that feels truly made for you.</p>
       </div>
     `;
+    const shipping = document.createElement("details");
+    shipping.className = "refund-policy";
+    shipping.innerHTML = `
+      <summary>Shipping, Alteration & Exchange Policy</summary>
+      <div>
+        <p>At Ador, every outfit is thoughtfully crafted with care and attention to detail. We are committed to ensuring a smooth and satisfying shopping experience for all our customers.</p>
+        <ul class="policy-jump">
+          <li><a href="#policy-delivery">Delivery Timeline</a></li>
+          <li><a href="#policy-custom">Customized Outfits</a></li>
+          <li><a href="#policy-alteration">Free Alterations</a></li>
+          <li><a href="#policy-support">Customer Support</a></li>
+        </ul>
+        <h3 id="policy-delivery"><a href="#policy-delivery">Delivery Timeline</a></h3>
+        <ul>
+          <li><strong>Standard Orders:</strong> Delivered within 15 days.</li>
+          <li><strong>Custom-Made Orders:</strong> Delivered within 20–25 days, depending on the customization requirements.</li>
+        </ul>
+        <h3 id="policy-custom"><a href="#policy-custom">Customized Outfits</a></h3>
+        <p>As customized outfits are specially made according to your measurements and preferences, we do not offer returns or exchanges on custom-made pieces.</p>
+        <h3 id="policy-alteration"><a href="#policy-alteration">Free Alterations</a></h3>
+        <p>Your perfect fit is important to us. In case of any measurement-related issues, we provide alterations completely free of cost.</p>
+        <ul>
+          <li>Alterations are usually completed within 1–2 working days after the outfit reaches us.</li>
+          <li>Our team will guide you through the alteration process to ensure the best possible fit.</li>
+        </ul>
+        <h3 id="policy-support"><a href="#policy-support">Customer Support</a></h3>
+        <p>Need assistance? We're always happy to help.</p>
+        <p>📞 WhatsApp: <a href="https://wa.me/919330305686" target="_blank" rel="noopener">+91 93303 05686</a></p>
+      </div>
+    `;
     const copyright = footer.querySelector(".copyright, .site-footer > p:last-child");
     footer.insertBefore(policy, copyright || null);
+    footer.insertBefore(shipping, copyright || null);
   });
 }
 
