@@ -1,0 +1,11 @@
+/src
+/public
+/.lovable
+/node_modules
+vite.config.ts
+tsconfig.json
+package.json
+bun.lockb
+bunfig.toml
+eslint.config.js
+components.json
