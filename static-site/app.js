@@ -24,6 +24,19 @@ const products = [
     image: "assets/celeste-1.png",
     images: ["assets/celeste-1.png", "assets/celeste-2.png", "assets/celeste-3.png", "assets/celeste-4.png"],
     description: "Introducing the Celeste Ruched Sleeve Dress \u2014 where tailored structure meets soft femininity. Designed in a chic blazer-style silhouette with statement ruched sleeves, smooth lining for comfort, functional pockets, and refined collar pasting for a polished finish. Perfect for brunch dates, birthday celebrations, intimate events, resort evenings, work lunches, and elegant day outings. A timeless piece made to feel effortless, elevated, and beautifully put together wherever you wear it."
+  },
+  {
+    id: "scarlet-kiss-dress",
+    name: "Scarlet Kiss Dress",
+    category: "Dresses",
+    price: 2799,
+    compare: 3200,
+    rating: "5.0",
+    reviews: 2,
+    tag: "New",
+    image: "assets/scarlet-1.jpg",
+    images: ["assets/scarlet-1.jpg", "assets/scarlet-2.jpg", "assets/scarlet-3.png", "assets/scarlet-4.png", "assets/scarlet-5.png"],
+    description: "A stunning crimson midi dress featuring a gathered crossover bodice, soft draped sleeves, and a flowy silhouette. Designed to flatter every curve while offering effortless elegance for cocktail nights, festive occasions, and special celebrations."
   }
 ];
 
