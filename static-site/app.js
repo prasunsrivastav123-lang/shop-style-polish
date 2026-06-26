@@ -37,6 +37,19 @@ const products = [
     image: "assets/scarlet-1.jpg",
     images: ["assets/scarlet-1.jpg", "assets/scarlet-2.jpg", "assets/scarlet-3.png", "assets/scarlet-4.png", "assets/scarlet-5.png"],
     description: "A stunning crimson midi dress featuring a gathered crossover bodice, soft draped sleeves, and a flowy silhouette. Designed to flatter every curve while offering effortless elegance for cocktail nights, festive occasions, and special celebrations."
+  },
+  {
+    id: "sunshine-marigold-dress",
+    name: "Sunshine Marigold Dress",
+    category: "Dresses",
+    price: 2299,
+    compare: 2650,
+    rating: "5.0",
+    reviews: 2,
+    tag: "New",
+    image: "assets/sunshine-marigold-1.png",
+    images: ["assets/sunshine-marigold-1.png", "assets/sunshine-marigold-2.png", "assets/sunshine-marigold-3.png"],
+    description: "\u201cMade for sunshine, compliments, and brunch plans.\u201d \u2600\ufe0f\ud83c\udf3c\u2728\n\nThe Sunshine Marigold Dress is a charming brunch-ready outfit featuring a flowy silhouette, elegant short jacket overlay, floral detailing, functional pockets, and soft lining. Designed for comfort, confidence, and effortless style. Available in Yellow, Orange, Pastel Pink."
   }
 ];
 
