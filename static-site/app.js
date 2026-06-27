@@ -218,6 +218,32 @@ function renderProductDetail() {
     });
   });
 
+  mount.querySelectorAll("[data-color]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const imgs = JSON.parse(btn.getAttribute("data-color-images"));
+      const name = btn.getAttribute("data-color");
+      const main = mount.querySelector("[data-main-image]");
+      if (main) main.src = imgs[0];
+      const nameEl = mount.querySelector("[data-color-name]");
+      if (nameEl) nameEl.textContent = name;
+      const thumbRow = mount.querySelector(".thumb-row");
+      if (thumbRow) {
+        thumbRow.innerHTML = imgs.map((src, i) => `<button type="button" class="thumb${i === 0 ? " active" : ""}" data-thumb="${src}"><img src="${src}" alt="${name} ${i + 1}"/></button>`).join("");
+        thumbRow.querySelectorAll("[data-thumb]").forEach((t) => {
+          t.addEventListener("click", () => {
+            const src = t.getAttribute("data-thumb");
+            if (main) main.src = src;
+            thumbRow.querySelectorAll(".thumb").forEach((x) => x.classList.remove("active"));
+            t.classList.add("active");
+          });
+        });
+      }
+      mount.querySelectorAll(".color-swatch").forEach((s) => s.classList.remove("active"));
+      btn.classList.add("active");
+    });
+  });
+
+
   mount.querySelector("[data-add-form]").addEventListener("submit", (event) => {
     event.preventDefault();
     const form = new FormData(event.currentTarget);
