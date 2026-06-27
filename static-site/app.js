@@ -171,6 +171,7 @@ function renderProductDetail() {
             <span class="compare">${currency.format(product.compare)}</span>
             <span class="discount">${discount(product)}% off</span>
           </div>
+          ${product.colors ? `<div class="color-options"><p class="option-title">Color: <span data-color-name>${product.colors[0].name}</span></p><div class="color-swatches">${product.colors.map((c, i) => `<button type="button" class="color-swatch${i === 0 ? " active" : ""}" data-color="${c.name}" data-color-images='${JSON.stringify(c.images)}' aria-label="${c.name}" title="${c.name}" style="background:${c.swatch}"></button>`).join("")}</div></div>` : ""}
           <div class="product-description">
             <h2 class="desc-heading">Description</h2>
             <p>${product.description}</p>
