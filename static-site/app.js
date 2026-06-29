@@ -60,7 +60,10 @@ const products = [
 const categories = [
   { name: "Co-Ords", image: "https://images.unsplash.com/photo-1516762689617-e1cffcef479d?auto=format&fit=crop&w=700&q=85" },
   { name: "Dresses", image: "https://images.unsplash.com/photo-1550639525-c97d455acf70?auto=format&fit=crop&w=700&q=85" },
-  { name: "Denim", image: ["assets/ldki.jpeg", "assets/denim-2.jpg"] },
+{
+  name: "Denim",
+  image: ["assets/ldki.jpeg"]
+}
 ];
 
 const sizes = ["XS", "S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL"];
