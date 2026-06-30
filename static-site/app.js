@@ -8,7 +8,7 @@ const products = [
     rating: "5.0",
     reviews: 4,
     tag: "Offer",
-   image: "assets/flora-muse-1.jpg",
+   image: "assets/flora-muse-1.png",
     images: ["assets/flora-muse-1.png", "assets/flora-muse-2.png", "assets/flora-muse-3.jpg", "assets/flora-muse-4.jpeg", "assets/flora-muse-5.jpeg"],
     colors: [
       { name: "Violet", swatch: "#800080", images: ["assets/flora-muse-1.jpg", "assets/flora-muse-2.jpg", "assets/flora-muse-3.jpg", "assets/flora-muse-4.jpeg", "assets/flora-muse-5.jpeg"] },
