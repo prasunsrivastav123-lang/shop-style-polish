@@ -9,10 +9,10 @@ const products = [
     reviews: 4,
     tag: "Offer",
    image: "assets/flora-muse-1.jpg",
-    images: ["assets/flora-muse-1.jpg", "assets/flora-muse-2.jpg", "assets/flora-muse-3.jpg", "assets/flora-muse-4.jpeg", "assets/flora-muse-5.jpeg"],
+    images: ["assets/flora-muse-1.png", "assets/flora-muse-2.png", "assets/flora-muse-3.jpg", "assets/flora-muse-4.jpeg", "assets/flora-muse-5.jpeg"],
     colors: [
-      { name: "Yellow", swatch: "#800080", images: ["assets/flora-muse-1.jpg", "assets/flora-muse-2.jpg", "assets/flora-muse-3.jpg", "assets/flora-muse-4.jpeg", "assets/flora-muse-5.jpeg"] },
-      { name: "Orange", swatch: "#4169E1", images: ["assets/flora1.jpeg", "assets/flora2.jpeg", "assets/flora3.jpeg", "assets/flora4.jpeg", "assets/flora5.jpeg"] }
+      { name: "Violet", swatch: "#800080", images: ["assets/flora-muse-1.jpg", "assets/flora-muse-2.jpg", "assets/flora-muse-3.jpg", "assets/flora-muse-4.jpeg", "assets/flora-muse-5.jpeg"] },
+      { name: "Royal Blue", swatch: "#4169E1", images: ["assets/flora1.jpeg", "assets/flora2.jpeg", "assets/flora3.jpeg", "assets/flora4.jpeg", "assets/flora5.jpeg"] }
     ],
     description: "Introducing the Flora Muse Blazer Dress \u2014 a playful blend of tailored elegance and feminine charm. Designed in a flattering blazer-style silhouette with delicate floral detailing, statement sleeves, functional pockets, soft lining, and refined finishing for an elevated look. Perfect for brunch dates, intimate celebrations, vacations, daytime events, caf\u00e9 outings, and elegant gatherings. A timeless statement piece created to make everyday dressing feel effortlessly graceful and beautifully unique."
   },
