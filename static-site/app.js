@@ -2,7 +2,7 @@ const products = [
   {
     id: "denim-long-dress",
     name: "Flora Muse Blazer Dress",
-    category: "Co-Ords",
+    category: "Dresses",
     price: 2399,
     compare: 2999,
     rating: "5.0",
@@ -19,7 +19,7 @@ const products = [
   {
     id: "celeste-ruched-sleeve-dress",
     name: "Celeste Ruched Sleeve Dress",
-    category: "Co-Ords",
+    category: "Dresses",
     price: 2899,
     compare: 3625,
     rating: "5.0",
@@ -32,7 +32,7 @@ const products = [
   {
     id: "scarlet-kiss-dress",
     name: "Scarlet Kiss Dress",
-    category: "Co-Ords",
+    category: "Dresses",
     price: 2799,
     compare: 3200,
     rating: "5.0",
@@ -45,7 +45,7 @@ const products = [
   {
     id: "sunshine-marigold-dress",
     name: "Sunshine Marigold Dress",
-    category: "Co-Ords",
+    category: "Dresses",
     price: 2299,
     compare: 2650,
     rating: "5.0",
@@ -58,70 +58,123 @@ const products = [
       { name: "Orange", swatch: "#e87722", images: ["assets/sunshine-marigold-1.png", "assets/sunshine-marigold-2.png", "assets/sunshine-marigold-3.png"] }
     ],
     description: "\u201cMade for sunshine, compliments, and brunch plans.\u201d \u2600\ufe0f\ud83c\udf3c\u2728\n\nThe Sunshine Marigold Dress is a charming brunch-ready outfit featuring a flowy silhouette, elegant short jacket overlay, floral detailing, functional pockets, and soft lining. Designed for comfort, confidence, and effortless style. Available in Yellow and Orange."
-  }
-];
+  },
+  {
+  id: "ivory-coord-set",
+  name: "Ivory Elegance Co-Ord Set",
+  category: "Co-Ords",
+  price: 2599,
+  compare: 3199,
+  rating: "5.0",
+  reviews: 8,
+  tag: "New",
+  image: "assets/ivory-coord-1.jpg",
+  images: [
+    "assets/ivory-coord-1.jpg",
+    "assets/ivory-coord-2.jpg",
+    "assets/ivory-coord-3.jpg",
+    "assets/ivory-coord-4.jpg"
+  ],
+  colors: [
+    {
+      name: "Ivory",
+      swatch: "#F8F4E8",
+      images: [
+        "assets/ivory-coord-1.jpg",
+        "assets/ivory-coord-2.jpg",
+        "assets/ivory-coord-3.jpg",
+        "assets/ivory-coord-4.jpg"
+      ]
+    },
+    {
+      name: "Black",
+      swatch: "#000000",
+      images: [
+        "assets/black-coord-1.jpg",
+        "assets/black-coord-2.jpg",
+        "assets/black-coord-3.jpg",
+        "assets/black-coord-4.jpg"
+      ]
+    }
+  ],
+  description: "A premium two-piece co-ord set featuring a relaxed-fit shirt and matching trousers. Crafted from soft breathable fabric for effortless style, perfect for brunches, travel, work and evening outings."
+},
 
-const products = [
-  {
-    id: "denim-long-dress",
-    name: "Flora Muse Blazer Dress",
-    category: "Dresses",
-    price: 2399,
-    compare: 2999,
-    rating: "5.0",
-    reviews: 4,
-    tag: "Offer",
-   image: "assets/flora-muse-1.png",
-    images: ["assets/flora-muse-1.png", "assets/flora-muse-2.png", "assets/flora-muse-3.jpg", "assets/flora-muse-4.jpeg", "assets/flora-muse-5.jpeg"],
-    colors: [
-      { name: "Violet", swatch: "#800080", images: ["assets/flora-muse-1.jpg", "assets/flora-muse-2.jpg", "assets/flora-muse-3.jpg", "assets/flora-muse-4.jpeg", "assets/flora-muse-5.jpeg"] },
-      { name: "Royal Blue", swatch: "#4169E1", images: ["assets/flora1.jpeg", "assets/flora2.jpeg", "assets/flora3.jpeg", "assets/flora4.jpeg", "assets/flora5.jpeg"] }
-    ],
-    description: "Introducing the Flora Muse Blazer Dress \u2014 a playful blend of tailored elegance and feminine charm. Designed in a flattering blazer-style silhouette with delicate floral detailing, statement sleeves, functional pockets, soft lining, and refined finishing for an elevated look. Perfect for brunch dates, intimate celebrations, vacations, daytime events, caf\u00e9 outings, and elegant gatherings. A timeless statement piece created to make everyday dressing feel effortlessly graceful and beautifully unique."
-  },
-  {
-    id: "celeste-ruched-sleeve-dress",
-    name: "Celeste Ruched Sleeve Dress",
-    category: "Dresses",
-    price: 2899,
-    compare: 3625,
-    rating: "5.0",
-    reviews: 3,
-    tag: "New",
-    image: "assets/celeste-1.png",
-    images: ["assets/celeste-1.png", "assets/celeste-2.png", "assets/celeste-3.png", "assets/celeste-4.png"],
-    description: "Introducing the Celeste Ruched Sleeve Dress \u2014 where tailored structure meets soft femininity. Designed in a chic blazer-style silhouette with statement ruched sleeves, smooth lining for comfort, functional pockets, and refined collar pasting for a polished finish. Perfect for brunch dates, birthday celebrations, intimate events, resort evenings, work lunches, and elegant day outings. A timeless piece made to feel effortless, elevated, and beautifully put together wherever you wear it."
-  },
-  {
-    id: "scarlet-kiss-dress",
-    name: "Scarlet Kiss Dress",
-    category: "Dresses",
-    price: 2799,
-    compare: 3200,
-    rating: "5.0",
-    reviews: 2,
-    tag: "New",
-    image: "assets/scarlet-1.jpg",
-    images: ["assets/scarlet-1.jpg", "assets/scarlet-2.jpg", "assets/scarlet-3.png", "assets/scarlet-4.png", "assets/scarlet-5.png"],
-    description: "A stunning crimson midi dress featuring a gathered crossover bodice, soft draped sleeves, and a flowy silhouette. Designed to flatter every curve while offering effortless elegance for cocktail nights, festive occasions, and special celebrations."
-  },
-  {
-    id: "sunshine-marigold-dress",
-    name: "Sunshine Marigold Dress",
-    category: "Dresses",
-    price: 2299,
-    compare: 2650,
-    rating: "5.0",
-    reviews: 2,
-    tag: "New",
-    image: "assets/sunshine-yellow-1.jpg",
-    images: ["assets/sunshine-yellow-1.jpg", "assets/sunshine-yellow-2.png", "assets/sunshine-yellow-3.png", "assets/sunshine-yellow-4.png", "assets/sunshine-yellow-5.png", "assets/sunshine-yellow-6.jpg"],
-    colors: [
-      { name: "Yellow", swatch: "#f5c518", images: ["assets/sunshine-yellow-1.jpg", "assets/sunshine-yellow-2.png", "assets/sunshine-yellow-3.png", "assets/sunshine-yellow-4.png", "assets/sunshine-yellow-5.png", "assets/sunshine-yellow-6.jpg"] },
-      { name: "Orange", swatch: "#e87722", images: ["assets/sunshine-marigold-1.png", "assets/sunshine-marigold-2.png", "assets/sunshine-marigold-3.png"] }
-    ],
-    description: "\u201cMade for sunshine, compliments, and brunch plans.\u201d \u2600\ufe0f\ud83c\udf3c\u2728\n\nThe Sunshine Marigold Dress is a charming brunch-ready outfit featuring a flowy silhouette, elegant short jacket overlay, floral detailing, functional pockets, and soft lining. Designed for comfort, confidence, and effortless style. Available in Yellow and Orange."
-  }
+{
+  id: "sage-linen-coord",
+  name: "Sage Linen Co-Ord Set",
+  category: "Co-Ords",
+  price: 2799,
+  compare: 3499,
+  rating: "4.9",
+  reviews: 12,
+  tag: "Best Seller",
+  image: "assets/sage-coord-1.jpg",
+  images: [
+    "assets/sage-coord-1.jpg",
+    "assets/sage-coord-2.jpg",
+    "assets/sage-coord-3.jpg",
+    "assets/sage-coord-4.jpg"
+  ],
+  description: "Minimal yet elegant linen co-ord set with a relaxed silhouette, perfect for everyday luxury and comfortable all-day wear."
+},
+
+{
+  id: "midnight-black-coord",
+  name: "Midnight Black Co-Ord Set",
+  category: "Co-Ords",
+  price: 2999,
+  compare: 3799,
+  rating: "5.0",
+  reviews: 16,
+  tag: "Trending",
+  image: "assets/midnight-coord-1.jpg",
+  images: [
+    "assets/midnight-coord-1.jpg",
+    "assets/midnight-coord-2.jpg",
+    "assets/midnight-coord-3.jpg",
+    "assets/midnight-coord-4.jpg"
+  ],
+  description: "A sophisticated black co-ord set with tailored trousers and a structured top. Ideal for parties, dinners, vacations and special occasions."
+},
+
+{
+  id: "rose-pink-coord",
+  name: "Rose Pink Co-Ord Set",
+  category: "Co-Ords",
+  price: 2499,
+  compare: 3099,
+  rating: "4.9",
+  reviews: 7,
+  tag: "New",
+  image: "assets/rose-coord-1.jpg",
+  images: [
+    "assets/rose-coord-1.jpg",
+    "assets/rose-coord-2.jpg",
+    "assets/rose-coord-3.jpg",
+    "assets/rose-coord-4.jpg"
+  ],
+  description: "Soft pink co-ord featuring a stylish crop top and high-waist pants. Designed for comfort with a modern feminine look."
+},
+
+{
+  id: "ocean-blue-coord",
+  name: "Ocean Blue Co-Ord Set",
+  category: "Co-Ords",
+  price: 2699,
+  compare: 3399,
+  rating: "5.0",
+  reviews: 10,
+  tag: "Offer",
+  image: "assets/ocean-coord-1.jpg",
+  images: [
+    "assets/ocean-coord-1.jpg",
+    "assets/ocean-coord-2.jpg",
+    "assets/ocean-coord-3.jpg",
+    "assets/ocean-coord-4.jpg"
+  ],
+  description: "Elegant blue co-ord set with premium fabric and relaxed tailoring. A perfect blend of comfort and sophistication."
+}
 ];
 
 const categories = [
