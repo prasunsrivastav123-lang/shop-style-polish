@@ -73,16 +73,6 @@ const products = [
     "assets/1.1.jpeg",
     "assets/1.2.PNG",
   ],
-  colors: [
-    {
-      name: "Ivory",
-      images: [
-        "assets/1.1.jpeg",
-        "assets/1.2.PNG",
-        
-      ]
-    },
-  ],
  description: "A stylish denim co-ord set designed for effortless everyday dressing. Comfortable, versatile, and easy to style for casual outings, travel, or weekend plans."
 
   //description: "A premium two-piece co-ord set featuring a relaxed-fit shirt and matching trousers. Crafted from soft breathable fabric for effortless style, perfect for brunches, travel, work and evening outings."
@@ -97,21 +87,12 @@ const products = [
   rating: "5.0",
   reviews: 8,
   tag: "New",
-  image: "assets/1.1.jpeg",
+  image: "assets/2.1.jpeg",
   images: [
-    "assets/1.1.jpeg",
-    "assets/1.2.PNG",
+    "assets/2.1.jpeg",
+    "assets/2.2.PNG",
   ],
-  colors: [
-    {
-      name: "Ivory",
-      images: [
-        "assets/2.1.jpeg",
-        "assets/2.2.PNG",
-        
-      ]
-    },
-  ],
+ 
  description: "A stylish denim co-ord set designed for effortless everyday dressing. Comfortable, versatile, and easy to style for casual outings, travel, or weekend plans."
 
   //description: "A premium two-piece co-ord set featuring a relaxed-fit shirt and matching trousers. Crafted from soft breathable fabric for effortless style, perfect for brunches, travel, work and evening outings."
