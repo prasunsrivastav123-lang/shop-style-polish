@@ -79,7 +79,7 @@ const products = [
 },
 
 {
-  id: "ivory-coord-set",
+  id: "ivory-coord-set2",
   name: "Ivory Elegance Co-Ord Set",
   category: "Co-Ords",
   price: 3299,
