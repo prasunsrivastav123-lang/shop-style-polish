@@ -80,9 +80,8 @@ const products = [
       name: "Ivory",
       images: [
         "assets/1.1.jpeg",
-        "assets/1.2.png",
-        "assets/ivory-coord-3.jpg",
-        "assets/ivory-coord-4.jpg"
+        "assets/1.2.PNG",
+        
       ]
     },
   ],
@@ -102,8 +101,7 @@ const products = [
   images: [
     "assets/2.1.jpeg",
     "assets/2.2.PNG",
-    "assets/sage-coord-3.jpg",
-    "assets/sage-coord-4.jpg"
+
   ],
   description: "Minimal yet elegant linen co-ord set with a relaxed silhouette, perfect for everyday luxury and comfortable all-day wear."
 },
