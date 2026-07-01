@@ -63,39 +63,28 @@ const products = [
   id: "ivory-coord-set",
   name: "Ivory Elegance Co-Ord Set",
   category: "Co-Ords",
-  price: 2599,
+  price: 3299,
   compare: 3199,
   rating: "5.0",
   reviews: 8,
   tag: "New",
-  image: "assets/ivory-coord-1.jpg",
+  image: "assets/1.1.jpeg",
   images: [
-    "assets/ivory-coord-1.jpg",
-    "assets/ivory-coord-2.jpg",
+    "assets/1.1.jpeg",
+    "assets/1.2.png",
     "assets/ivory-coord-3.jpg",
     "assets/ivory-coord-4.jpg"
   ],
   colors: [
     {
       name: "Ivory",
-      swatch: "#F8F4E8",
       images: [
-        "assets/ivory-coord-1.jpg",
-        "assets/ivory-coord-2.jpg",
+        "assets/1.1.jpeg",
+        "assets/1.2.png",
         "assets/ivory-coord-3.jpg",
         "assets/ivory-coord-4.jpg"
       ]
     },
-    {
-      name: "Black",
-      swatch: "#000000",
-      images: [
-        "assets/black-coord-1.jpg",
-        "assets/black-coord-2.jpg",
-        "assets/black-coord-3.jpg",
-        "assets/black-coord-4.jpg"
-      ]
-    }
   ],
   description: "A premium two-piece co-ord set featuring a relaxed-fit shirt and matching trousers. Crafted from soft breathable fabric for effortless style, perfect for brunches, travel, work and evening outings."
 },
@@ -104,15 +93,15 @@ const products = [
   id: "sage-linen-coord",
   name: "Sage Linen Co-Ord Set",
   category: "Co-Ords",
-  price: 2799,
+  price: 3299,
   compare: 3499,
   rating: "4.9",
   reviews: 12,
   tag: "Best Seller",
-  image: "assets/sage-coord-1.jpg",
+  image: "assets/2.1.jpeg",
   images: [
-    "assets/sage-coord-1.jpg",
-    "assets/sage-coord-2.jpg",
+    "assets/2.1.jpeg",
+    "assets/2.2.PNG",
     "assets/sage-coord-3.jpg",
     "assets/sage-coord-4.jpg"
   ],
